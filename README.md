@@ -63,3 +63,10 @@ There was a huge class imbalance in the predictions. There were 200K+ songs pred
 
 ## Future steps
 In some of the labeling, songs that had a slower tempo but positive lyrics were categorized as sad songs. This led to some issues with the predictions. Future steps include fine tuning the labeling and creating the recommendation engine. 
+
+## Resources
+Kaggle Dataset - https://www.kaggle.com/yamaerenay/spotify-dataset-19212020-160k-tracks?select=data_w_genres.csv 
+
+Get a Playlist Spotify API - https://api.spotify.com/v1/playlists/{playlist_id}
+  
+Audio Features Spotify API - https://api.spotify.com/v1/audio-features
