@@ -20,6 +20,8 @@ Each song had the following attributes:
 * Mode
 * Release Date
 
+Comprehensive tracks information can be downloaded here:  https://www.kaggle.com/yamaerenay/spotify-dataset-19212020-160k-tracks?select=data_w_genres.csv 
+
 ## EDA
 
 For my initial model, I chose three foundational moods: happy, angry and sad. I had 150 mood playlists and in order for a song to be categorized as one of the three moods, it had to have appeared in two or more of these playlists. 
