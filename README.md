@@ -4,7 +4,19 @@ Authors: Donna Lee
 
 ## Data Overview 
 
-I wanted to create a recommendation engine that took in user input for song and mood to generate song reommendations. I used a comprehensive dataset with 500K+ songs and their audio features as well as mood labels from 150 mood playlists from Spotify. 
+I wanted to create a recommendation engine that took in user input for song and mood to generate song reommendations. 
+
+For my main dataset, I got a dataset from Kaggle (which was obtained through the Spotify API) which contains more than 500K songs and their audio features. 
+
+The first step was to label the songs into three different moods. For a subset of the data, I grabbed labels from user created Spotify playlists. For this MVP, I decided to go with three fundamental moods; happy, sad and angry. 
+
+I got 50 playlists per mood and used that as my labels for the songs that appeared in the playlists. That list of songs with labels came out to be around 8K songs. I used that data to train two classification models, Random Forest and KNN. 
+
+Using my best model I predicted the mood of the remaining 500K songs in my main dataset from Kaggle. 
+
+With all songs labeled with moods, I used a Euclidean distance recommendation system to take a user inputted song and desired mood to generate the top ten songs that are similar in sound and labeled as that specific mood. 
+
+Comprehensive tracks information can be downloaded here:  https://www.kaggle.com/yamaerenay/spotify-dataset-19212020-160k-tracks?select=data_w_genres.csv 
 
 Each song had the following attributes: 
 * Acousticness
@@ -20,11 +32,9 @@ Each song had the following attributes:
 * Mode
 * Release Date
 
-Comprehensive tracks information can be downloaded here:  https://www.kaggle.com/yamaerenay/spotify-dataset-19212020-160k-tracks?select=data_w_genres.csv 
-
 ## EDA
 
-For my initial model, I chose three foundational moods: happy, angry and sad. I had 150 mood playlists and in order for a song to be categorized as one of the three moods, it had to have appeared in two or more of these playlists. 
+With 150 playlists, in order for a song to be categorized as one of the three moods, it had to have appeared in two or more of these playlists. 
 
 This threshold gave me a training dataset of around 2,000 songs with playlist labels. 
 
