@@ -44,7 +44,10 @@ There wasn't much of a class weight imbalance. The models used balanced class we
 
 ![image](https://user-images.githubusercontent.com/76017120/117242634-a289b200-ae03-11eb-8c30-067cf44fa09e.png)
 
-The popularity of each mood category was also very similar. 
+
+Take a look at my most important features for my classification model, I noticed that happy and angry songs were very similar in audio makeup. This explains why the model wasn't very good at predicting angry songs!
+
+![image](https://user-images.githubusercontent.com/76017120/118056194-7a480900-b357-11eb-8137-c99a31455c3c.png)
 
 
 
@@ -55,26 +58,42 @@ I ran two models - _KNN_ and _Random Forest_ and optimized towards a F1 Score be
 
 | Model         | F1 Score    |
 | -----------   | ----------- |
-| Random Forest |   0.8126    |
-|  KNN          |   0.7533    |
+| Random Forest |   0.8162    |
+|  KNN          |   0.7853    |
 
 
 The **Random Forest** model had the highest F1 score so I used that when predicting the moods of the songs with missing labels.
 
 ![image](https://user-images.githubusercontent.com/76017120/117242777-eb416b00-ae03-11eb-8977-f5b0013d6274.png)
 
-The model was pretty good at predicting all three moods. The most common mistake was sad songs getting categorized as happy songs. 
+The **KNN** model wasn't far behind with the predictions. 
+![image](https://user-images.githubusercontent.com/76017120/118056353-c98e3980-b357-11eb-8584-18370db0c6ec.png)
+
 
 ## Predictions 
 
 ![image](https://user-images.githubusercontent.com/76017120/117242893-2a6fbc00-ae04-11eb-8ea7-797eb2454d0b.png)
 
-These were some of the predictions! 
+These were some of the mood predictions! 
 
 There was a huge class imbalance in the predictions. There were 200K+ songs predicted for each happy and song category but only 37K for the angry category. This is likely due to the overlap of song features between angry and happy songs. 
 
+
+Below are some predictions for the recommendation engine for the song "We Belong Together" by Mariah Carey. 
+![image](https://user-images.githubusercontent.com/76017120/118056558-2ab60d00-b358-11eb-8e88-d5200fb1b6a6.png)
+Angry Recommendations 
+
+
+![image](https://user-images.githubusercontent.com/76017120/118056571-31dd1b00-b358-11eb-8802-78fae4d66975.png)
+Sad Recommendations
+
+
+![image](https://user-images.githubusercontent.com/76017120/118056581-36a1cf00-b358-11eb-9857-dc05319c50bd.png)
+Happy Recommendations
+
+
 ## Future steps
-In some of the labeling, songs that had a slower tempo but positive lyrics were categorized as sad songs. This led to some issues with the predictions. Future steps include fine tuning the labeling and creating the recommendation engine. 
+In some of the labeling, songs that had a slower tempo but positive lyrics were categorized as sad songs. This led to some issues with the predictions. Future steps include using NLP to analyze the lyrics for better predictions on the mood of a song and gathering more labels for older songs. Older songs were underrepresented in the training set which may have further skewed the predictions. 
 
 ## Resources
 Kaggle Dataset - https://www.kaggle.com/yamaerenay/spotify-dataset-19212020-160k-tracks?select=data_w_genres.csv 
