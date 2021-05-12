@@ -67,8 +67,7 @@ The **Random Forest** model had the highest F1 score so I used that when predict
 ![image](https://user-images.githubusercontent.com/76017120/117242777-eb416b00-ae03-11eb-8977-f5b0013d6274.png)
 
 The **KNN** model wasn't far behind with the predictions. 
-![image](https://user-images.githubusercontent.com/76017120/118056353-c98e3980-b357-11eb-8584-18370db0c6ec.png)
-
+![image](https://user-images.githubusercontent.com/76017120/118056678-5a651500-b358-11eb-967d-4a616ec2209a.png)
 
 ## Predictions 
 
@@ -81,14 +80,17 @@ There was a huge class imbalance in the predictions. There were 200K+ songs pred
 
 Below are some predictions for the recommendation engine for the song "We Belong Together" by Mariah Carey. 
 ![image](https://user-images.githubusercontent.com/76017120/118056558-2ab60d00-b358-11eb-8e88-d5200fb1b6a6.png)
+
 Angry Recommendations 
 
 
 ![image](https://user-images.githubusercontent.com/76017120/118056571-31dd1b00-b358-11eb-8802-78fae4d66975.png)
+
 Sad Recommendations
 
 
 ![image](https://user-images.githubusercontent.com/76017120/118056581-36a1cf00-b358-11eb-9857-dc05319c50bd.png)
+
 Happy Recommendations
 
 
