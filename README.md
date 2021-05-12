@@ -47,7 +47,7 @@ There wasn't much of a class weight imbalance. The models used balanced class we
 
 Take a look at my most important features for my classification model, I noticed that happy and angry songs were very similar in audio makeup. This explains why the model wasn't very good at predicting angry songs!
 
-![image](https://user-images.githubusercontent.com/76017120/118056194-7a480900-b357-11eb-8137-c99a31455c3c.png)
+![image](https://user-images.githubusercontent.com/76017120/118056941-dbbca780-b358-11eb-9654-2c8d4a7690b8.png)
 
 
 
